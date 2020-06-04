@@ -9,25 +9,23 @@
 
 > :Title
 >
-> Sample Blog
+> Lennart's Blog
 
-This is a sample homepage for your [`coding.blog`](https://coding.blog). You can use
-it to showcase your latest / most-important blog posts (or whatever suites your case).
-You can modify its content by editting `posts/index.md`.
+This will be my blog from now on. I'll use it to blog about cloud adoption and cloud architectures.  
 
----
+## About Me
+
+![Lennart](/img/headshot.jpg)
+
+Lennart started working as a System Administrator in the Exchange and Active Directory field for small and midsized companies. After being a IT Trainer for some time, he realized that the future is in cloud computing. Lennart shortly started working as a Consultant with the first version of the Microsoft private cloud, back in the day, with System Center components only. Eventually leading Azure projects for Enterprise customers. Now he works at Microsoft as a Cloud Solution Architect specializing in Datacenter Transformation topics.
 
 # Latest Posts
 
 So here are the latest posts:
 
-> :ArticleCard src=/sample-blog-post, style=box
+> :ArticleCard src=/successful-cloud-adoption-primer, style=box
 
-> :ArticleCard src=/sample-blog-post, style=box
-
-> :ArticleCard src=/sample-blog-post
-
-> :ArticleCard src=/sample-blog-post
+> :ArticleCard src=/successful-cloud-adoption-primer
 
 ---
 
