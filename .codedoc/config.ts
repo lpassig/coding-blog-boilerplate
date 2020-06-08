@@ -12,7 +12,7 @@ export const config = /*#__PURE__*/configuration({
     base: 'posts'
   },
   dest: {
-    namespace: '/coding-blog-boilerplate',    // --> change this if you want to also deploy to GitHub Pages
+    namespace: '/Lennart\'s Blog',    // --> change this if you want to also deploy to GitHub Pages
     html: 'dist',
     assets: process.env.GITHUB_BUILD === 'true' ? 'dist' : '.',
     bundle: process.env.GITHUB_BUILD === 'true' ? 'bundle' : 'dist/bundle',
@@ -35,7 +35,7 @@ export const config = /*#__PURE__*/configuration({
   misc: {
     github: {
       repo: 'coding-blog-boilerplate',
-      user: 'CONNECT-platform'
+      user: 'lpassig'
     }
   }
 });
