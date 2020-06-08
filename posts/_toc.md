@@ -1,5 +1,5 @@
 [Home](/)
-[Successdful cloud adoption primer](/successful-cloud-adoption-primer)
+[Successful cloud adoption primer](/successful-cloud-adoption-primer)
 
 <br><br>
 
