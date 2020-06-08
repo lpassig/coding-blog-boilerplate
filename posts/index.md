@@ -9,8 +9,7 @@
 
 > :Title
 >
-> Lennart's Blog
-
+> Lennart's Home
 
 This will be my blog from now on. I'll use it to blog about cloud adoption and cloud architectures.  
 
