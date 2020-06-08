@@ -1,19 +1,19 @@
-> :Hero src=https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=1900&h=600&fit=crop,
+> :Hero src=https://source.unsplash.com/3fPXt37X6UQ/1900x600,
 >       mode=light,
 >       target=desktop,
 >       leak=156px
 
-> :Hero src=https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=1200&h=600&fit=crop,
+> :Hero src=https://source.unsplash.com/3fPXt37X6UQ/1200x600,
 >       mode=light,
 >       target=mobile,
 >       leak=96px
 
-> :Hero src=https://images.unsplash.com/photo-1508780709619-79562169bc64?w=1900&h=600&fit=crop,
+> :Hero src=https://source.unsplash.com/3fPXt37X6UQ/1900x600,
 >       mode=dark,
 >       target=desktop,
 >       leak=156px
 
-> :Hero src=https://images.unsplash.com/photo-1508780709619-79562169bc64?w=1200&h=600&fit=crop,
+> :Hero src=https://source.unsplash.com/3fPXt37X6UQ/1200x600,
 >       mode=dark,
 >       target=mobile,
 >       leak=96px
