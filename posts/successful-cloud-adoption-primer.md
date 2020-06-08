@@ -26,7 +26,7 @@
 
 <br>
 
-Whenever I help customers adopting the Azure cloud, I find myself talking about the same design principles. So, I decided that in this article, I want to discuss some of my major **adoption principles** and **adoption practices** when talking about cloud computing adoption and making the cloud enterprise ready. Almost all those principles are not of technical nature per se, but they can be enforces/leverages by using technical tools. However, first and foremost my major hypothesis is that:
+Whenever I help customers adopting the Azure cloud, I find myself talking about the same design principles all the time. So, I decided that in this article to share some of my thoughts. I want to discuss some of my major **design principles and practices** when talking about cloud computing adoption and making the cloud **enterprise ready**. Almost all those principles are not of technical nature per se, but they can be enforces/leverages by using technical tools. However, first and foremost my major hypothesis is that:
 
 **<center><blockquote>The successful adoption of the cloud is all about company culture!</center></blockquote>**
 
@@ -35,7 +35,7 @@ If you work or lead a centralized IT department be an enabler, rather than block
 
 **<center><blockquote>Give them the choice and let them try; Shift the responsibility!</center></blockquote>**
 
-There are more than enough tasks you need to worry about! Maybe they can fulfill the requirements as good as you can if not you can help them😊
+There are more than enough tasks you need to worry about! Maybe they can fulfill the requirements as good as you can if not you can help them. 😊
 
 Depending on their needs you can either develop a default service that you want to offer (e.g. Centralized CI/CD Platform) or introduce/position yourself as an internal consulting department that helps them e.g. introduce their own tool or e.g. fulfilling the needed security requirements!
 
@@ -50,6 +50,7 @@ So, if you do go ahead with such a plan, introduce at least three types of matur
     *For example: Azure Kubernetes Service (AKS)*
 
 3. **SandBox** - Developer wants to experiment and qualify an Idea/PoC     
+    
     *For example: Try out Azure Webapps for company website*
 
 For each type described above, you offer different levels of services depending on the needs of the target group as already mentioned before. Some might just need an Enterprise Ready Subscription, while others need more support!  
@@ -110,29 +111,15 @@ Sure, sometimes it takes longer, sometimes it takes less time, but: Most of the 
 They are mostly free of charge and using them and giving us feedback you can indirectly or in some cases directly influence the product roadmap!
 
 # Closing
-Are you interested in beginning your own cloud adoption journey and want to talk more in detail? Feeld free to engage with me 😊 
+Are you interested in beginning your own cloud adoption journey and want to talk more in detail? Feel free to engage with me 😊 
 
-Do you need an Enterprise-Ready Subscription Blueprint? Check out my Github Repository: https://github.com/lpassig/AzureSpokeBlueprint 
+Do you need an Enterprise-Ready Subscription Blueprint? Check out my Github repository: https://github.com/lpassig/AzureSpokeBlueprint 
 
 Here I have published a blueprint that creates a fully functional spoke landing zone that can be provided by the central IT and used by business units.
 
-Let me know what you think in the comments below!
+Let me know what you think!
 
 Cheers!
 
-TO INTEGRATE:
-
-Check Security Compass for Principals! 
-
-Choose a good segmatation Strategy: Enable, Contain RIsk, Monitor!
-
 ---
 
-> :DarkLight
-> > :InDark
-> >
-> > _Hero image by [Kaitlyn Baker](https://unsplash.com/@kaitlynbaker) from [Unsplash](https://unsplash.com)_
->
-> > :InLight
-> >
-> > _Hero image by [Glenn Carstens-Peters](https://unsplash.com/@glenncarstenspeters) from [Unsplash](https://unsplash.com)_

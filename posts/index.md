@@ -11,9 +11,10 @@
 >
 > Lennart's Blog
 
+
 This will be my blog from now on. I'll use it to blog about cloud adoption and cloud architectures.  
 
-## About Me
+# About Me
 
 ![Lennart](/img/headshot.jpg)
 
