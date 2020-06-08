@@ -70,9 +70,9 @@ A good segmetation strategy according to Mark Simos:
 
 1. **Enables Operations** – Minimizes operation friction by aligning to business practices and applications
 
-2. **Contains Risk** - Adds cost and friction to attackers by
-Isolating sensitive workloads from compromise of other assets
-Isolating high exposure systems from being used as a pivot to other systems
+2. **Contains Risk** - Adds cost and friction to attackers by:
+   1. Isolating sensitive workloads from compromise of other assets
+   2. Isolating high exposure systems from being used as a pivot to other systems
 
 3. **Is Monitored** – Security Operations should monitor for potential violations of the integrity of the segments (account usage, unexpected traffic, etc.)
 
@@ -113,9 +113,9 @@ They are mostly free of charge and using them and giving us feedback you can ind
 # Closing
 Are you interested in beginning your own cloud adoption journey and want to talk more in detail? Feel free to engage with me 😊 
 
-Do you need an Enterprise-Ready Subscription Blueprint? Check out my Github repository: https://github.com/lpassig/AzureSpokeBlueprint 
+Are you interested an **Enterprise-Ready** Azure Subscription Blueprint? Check out my Github repository: https://github.com/lpassig/AzureSpokeBlueprint 
 
-Here I have published a blueprint that creates a fully functional spoke landing zone that can be provided by the central IT and used by business units.
+There I have published a blueprint that creates a fully functional spoke landing zone that can be provided by the central IT and used by business units.
 
 Let me know what you think!
 
