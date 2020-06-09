@@ -20,7 +20,7 @@
 
 > :Title shadow=0 0 8px black, color=white
 >
-> German Angst or conservative innovation and its role in the Cloud Adoption!
+> German Angst or Conservative Innovation and its Role in the Cloud Adoption!
 
 > :Author src=github
 
