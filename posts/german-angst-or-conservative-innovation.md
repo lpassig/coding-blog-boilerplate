@@ -18,7 +18,7 @@
 >       target=mobile,
 >       leak=96px
 
-> :Title shadow=0 0 8px black, color=white
+> :Title shadow=0 0 8px black, color=black
 >
 > German Angst or conservative innovation and its role in the Cloud Adoption!
 
@@ -34,13 +34,19 @@ These discussions often result in quite heated and negative feedback in the comm
 
 >*“The country that invented the ‘triple-helix’, today is criticized for insufficient entrepreneurship and innovation, and for coddling university academics who are described as conservative, inward-looking, and resistant to change”*<sup id="a2">[2](#f2)</sup>
 
-However, I want to shine another light on this topic that mostly has a negative connotation attached to it and give another perspective.
+However, I want to shine another light on this topic that mostly has a negative connotation attached to it and give another perspective. I want to even go so far saying: Germany and German companies are doing some things way better compared to other countries and companies in this context. 
 
 # My perspective
 
-This perception of Germany as a state that is lagging behind in the field of technology and innovation has become a turned from an ephemeral joke to a prevalent idea spanning across fields. Moreover, the normative idea of innovation is rarely questioned. It has become an answer, a buzzword and almost a knee-jerk reaction to most policy issues. But it begs the question: what problem are we solving through *“innovation”*? And is innovation and the amount of resources needed for it really ALWAYS the most optimal answer to issues faced by our businesses? 
+The perception that Germany is lagging behind in the field of technology and innovation, has turned from an ephemeral joke to a prevalent idea spanning across fields. Moreover, the normative idea of innovation is rarely questioned. It has become an answer, a buzzword and almost a knee-jerk reaction to most policy issues. 
 
-## The roots 
+But it begs the question: 
+
+**<center><blockquote>What problem are we solving through innovation?</center></blockquote>**  
+
+And continuing on that path: Is innovation and the amount of resources needed for it, **ALWAYS** the most optimal answer to issues faced by businesses?
+
+## German Angst 
 One of the earliest references of the term “German Angst” or more precisely “West Germany: **Moment of Angst**“ can be found on the frontpage of the TIME MAGAZIN published in 1981. 
 
 Within the context of the society there, it was used to describe not just a feeling but was in fact a reference of the political and socio-economic climate, that was reigning in the German society. Germans seemed to fear a lot of things, existential dread being one of them as well as the perpetual risk of a nuclear war during the cold war era.
@@ -48,9 +54,13 @@ Within the context of the society there, it was used to describe not just a feel
 ![Time Magazin Titel Cover](/img/time_german_angst.jpg)
 Title: *West Germany: Moment of Angst*
  
-Now the term is widely spread across industries and can be used as a synonym for something that is *“typically German”*. Meaning, being first and foremost: cautious, scared and critical of anything *“new”*.
+Now the term is widely spread across industries and has been  used as a synonym for something that is *“typically German”*. Meaning, the behavoir of being: 
 
-While German Angst is more related to sociology issues, the current trend of German innovation can be better described as **conservative innovation**. 
+<center><blockquote>Cautious, scared and critical of torwards anything “new”</center></blockquote>
+
+## Conservative Innovation
+
+German Angst as a term is more related to sociology issues. Since this is not the major topic of this article, the current trend of German innovation can be better described as **conservative innovation**. 
 
 This term was only recently characterized by (amongst others) **Sebastian Pfotenhauer**<sup id="a3">[3](#f3)</sup> Professor at the Technical University Munich (TUM) School of Management and Munich Center for Technology in Society (MCTS).
 
@@ -58,23 +68,27 @@ In multiple congress contributions<sup id="a4">[4](#f4)</sup> he explained conse
 
 > *“...**preserving traditional socio-economic orders** rather than disrupting them; to **favor and safeguard political and economic incumbents** rather than enable new entrants; and to **act from a perceived position of strength** or even saturation rather than decline or emergency. Moreover, Bavaria innovates **ignoring or even rejecting integrative European techno-politics.**”*
 
-## The doomsday argument
+# The doomsday argument
 
-However, this is not a phenomenon limited to Bavaria, is its rather a trend across all German Companies. Especially in the manufacturing sector (Mainly based in the south of Germany) such a trend is visible, since they operate out of **position of strength** as mentioned before:
+This is not a phenomenon limited to Bavaria, is its rather a trend across several German companies. Especially in the manufacturing sector (Heavily based in the south of Germany) such a trend is visible, since they operate out of **position of strength** as mentioned before.
 
 ![Katapult Magazin](/img/katapult_bw.jpg)
 Title: *Countries and Federal states with less economic performance than Baden-Wuerttemberg.*<sup id="a5">[5](#f5)</sup> 
 
-This leads to a slow adoption rate of new “innovative” technology such as “Cloud Computing”. Those companies tend to fear the consequences in the socio-economic order and rather like to be in the second adoption “wave”, after the initial problems/questions are already solved. However, by acting like that **these companies might lose an important time** in the market disruption battle. 
+This leads to a slow/er adoption rate of new *“innovative”* technology such as “Cloud Computing”. Those companies tend to fear the consequences in the socio-economic order and they prefer to be in the second adoption “wave”, after the initial problems/questions are already solved.
 
-To quote **C. William Pollard**<sup id="a6">[6](#f6)</sup> form his book *The Soul of the Firm*:
+Resulting into the fact, that Germany with 22% was/is always below the avarage of 26%, when it comes to the use of cloud computing service.<sup id="a6">[6](#f6)</sup>
+
+![Eurostat](/img/Use_of_cloud_computing_services,_2014_and_2018_(%_of_enterprises).png)
+
+However, by acting like that **these companies might lose an important time** in the worldwide market disruption battle. To quote **C. William Pollard**<sup id="a7">[7](#f7)</sup> form his book *The Soul of the Firm*:
 
 > *“Learning and innovation go hand in hand. The arrogance of success is to think that what you did yesterday will be sufficient for tomorrow.”*
  
 # The light in the dark 
-If you stopped reading after the first part, it might seems like that all is lost for big enterprises if they continue what they do, since they are stuck in an *“conservative innovation”* bubble. However, there is another side to that story.
+If you stopped reading after the first part, it might seems like that all is lost for big enterprises, if they continue what they do. They are stuck in an *“conservative innovation”* bubble. However, there is another side to that story.
 
-Whilst innovation and disruption are almost always considered *“cool”* and some people (mostly people working in technical fields) cannot wait to jump on the bandwagon, there is also a darker side to this approach.
+Whilst innovation and disruption are almost always considered *“cool”* and some people (mostly people working in technical fields) cannot wait to jump on the bandwagon, there is also a darker side to this as well.
 
 There are certain topics in innovation and disruption initiatives that almost nobody talks about: 
 
@@ -82,32 +96,26 @@ There are certain topics in innovation and disruption initiatives that almost no
 
 Look at the following examples: 
 
-1. Public Safety: 
-   1. 5 G paper – 180 Scientists against it https://www.jrseco.com/european-union-5g-appeal-scientists-warn-of-potential-serious-health-effects-of-5g/, Swisscom patent from 2004 REDUCTION OF ELECTROSMOG IN WIRELESS LOCAL NETWORKS, WO/2004/075583
+1. In the intro the 5G network expansion was mentioned and how Germany was slow to adopt or even plan the new technology. But there are also over 230 scientists from more than 40 countries that have expressed<sup id="a8">[8](#f8)</sup> their “serious concerns” against increasing exposure to EMF generated by electric and wireless devices already before the additional 5G roll-out. 
    
-   2. Cameras in public spaces: 
-    https://www.sscqueens.org/projects/scan/faqs#one (Racial Profiling, Crime Rate)
+2.	Capitol One used Amazon Web Services (AWS) to host some of their applications. Which can be considered a quite innovative; espacially in the financial sector. However, they have misconfigured the certain parts<sup id="a8">[8](#f8)</sup>, which allowed a hacker to gain entry. This resulted in personal data of 106 million customers in the US and Canada being exposed, who had applied for credit cards.
 
-3.	Capitol One used Amazon Web Services (AWS) to host some of their applications. Which can be considered a quite innovative in the financial sector. However, they have misconfigured the certain parts<sup id="a7">[7](#f7)</sup>, which allowed a hacker to gain entry. This resulted in personal data of 106 million customers in the US and Canada being exposed, who had applied for credit cards. 
+3.	Tesla uses around eight cameras in order to deliver on of their flagship features *“autopilot”*. But do you want to get filmed and potentially analyzed while walking on the street next to a Tesla? Do you want innovation on the back of privacy by gaining as much data as possible?
 
-4.	Tesla uses around eight cameras in order to deliver on of their flagship features *“autopilot”*. But do you want to get filmed and potentially analyzed while walking on the street next to a Tesla? Do you want innovation on the back of privacy by gaining as much data as possible?
-
-    >*"While car owners have the option to opt out of sharing these video clips or private location data, bystanders captured in these videos have no say in how footage of them will be used, and are typically not even aware that they’re being documented."*<sup id="a8">[8](#f8)</sup>
+    >*"While car owners have the option to opt out of sharing these video clips or private location data, bystanders captured in these videos have no say in how footage of them will be used, and are typically not even aware that they’re being documented."*<sup id="a9">[9](#f9)</sup>
 
 There are great minds out there, that can summarize certain aspects of the dilemma brilliantly:
 
->**If data is the new oil, data breaches should be treated like oil spills**<sup id="a9">[9](#f9)</sup>
+>**If data is the new oil, data breaches should be treated like oil spills**<sup id="a10">[10](#f10)</sup>
 
 # What can we all learn from it?
-We need to pause a bit more and engage with the technology not only from a technical perspective but also its socio-economic impact. What are the potential futures that could arise if this technology was widely adopted? Through creating these scenarios and consequently the world we envision, we can leverage the technology to reach the desirable futures  that we want.
+We need to pause a bit more and engage with the technology not only from a technical perspective but also its socio-economic impact! Questions like: 
 
-## So what is the potential of Cloud computing? 
+> What are the potential futures that could arise if this technology was widely adopted? 
 
-For simplicity lets have a look at most extreme scenarios have a look at an utopian scenario and one that can be described as doomsday...
+need to be heard and discussed. Through creating these scenarios and consequently the world we envision, we can leverage the technology to reach the desirable futures  that we want.
 
-TBD
-
-# Closing 
+# So what is the potential of Cloud computing? 
 
 When it comes to technology (Cloud Computing included) and the quick adoption of it. With a trustworthy and well aware partner and certified cloud provider on the side German companies are still able to deliver innovative products. But the timeline might shift slightly more into the future. 
 
@@ -131,12 +139,16 @@ Cheers!
 
 <b id="f5">5</b> Katapult Magazin (https://katapult-magazin.de/) [↩](#a5)
 
-<b id="f6">6</b> GREAT AMERICAN BUSINESS LEADERS OF THE 20TH CENTURY (https://www.hbs.edu/leadership/20th-century-leaders/Pages/details.aspx?profile=c_william_pollard) [↩](#a6)
+<b id="f6">6</b> Magdalena KAMINSKA, Maria SMIHILY, Cloud computing - statistics on the use by enterprises (https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Cloud_computing_-_statistics_on_the_use_by_enterprises#Use_of_cloud_computing:_highlights) [↩](#a6)
 
-<b id="f7">7</b> Everything We Know About the Capital One Hacking Case So Far (https://www.wired.com/story/capital-one-paige-thompson-case-hacking-spree/) [↩](#a7)
+<b id="f7">7</b> GREAT AMERICAN BUSINESS LEADERS OF THE 20TH CENTURY (https://www.hbs.edu/leadership/20th-century-leaders/Pages/details.aspx?profile=c_william_pollard) [↩](#a7)
 
-<b id="f8">8</b> Your Tesla Is Watching–and Recording–You All the Time (https://www.lamag.com/citythinkblog/tesla-recording-data-privacy/) [↩](#a8)
+<b id="f8">8</b> International Appeal https://www.emfscientist.org/index.php/emf-scientist-appeal [↩](#a8)
 
-<b id="f9">9</b> The Exxon Valdez of cyberspace (https://www.economist.com/business/2019/08/08/the-exxon-valdez-of-cyberspace) [↩](#a9)
+<b id="f9">9</b> Everything We Know About the Capital One Hacking Case So Far (https://www.wired.com/story/capital-one-paige-thompson-case-hacking-spree/) [↩](#a9)
+
+<b id="f10">10</b> Your Tesla Is Watching–and Recording–You All the Time (https://www.lamag.com/citythinkblog/tesla-recording-data-privacy/) [↩](#a10)
+
+<b id="f11">11</b> The Exxon Valdez of cyberspace (https://www.economist.com/business/2019/08/08/the-exxon-valdez-of-cyberspace) [↩](#a11)
 
 ---
