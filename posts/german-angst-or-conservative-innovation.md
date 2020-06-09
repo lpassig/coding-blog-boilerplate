@@ -92,7 +92,7 @@ Whilst innovation and disruption are almost always considered *“cool”* and s
 
 There are certain topics in innovation and disruption initiatives that almost nobody talks about: 
 
-*<center><blockquote>Privacy and Security!</center></blockquote>*
+**<center><blockquote>Privacy and Security!</center></blockquote>**
 
 Look at the following examples: 
 
@@ -106,18 +106,22 @@ Look at the following examples:
 
 There are great minds out there, that can summarize certain aspects of the dilemma brilliantly:
 
->**If data is the new oil, data breaches should be treated like oil spills**<sup id="a10">[10](#f10)</sup>
+**<center>If data is the new oil, data breaches should be treated like oil spills<sup id="a10">[10](#f10)</sup></center>**
 
 # What can we all learn from it?
-We need to pause a bit more and engage with the technology not only from a technical perspective but also its socio-economic impact! Questions like: 
+We need to pause a bit more and engage with the technology not only from a technical perspective but also its socio-economic impact! 
 
-> What are the potential futures that could arise if this technology was widely adopted? 
+<center>Questions like:</center> 
 
-need to be heard and discussed. Through creating these scenarios and consequently the world we envision, we can leverage the technology to reach the desirable futures  that we want.
+**<center>What are the potential futures that could arise if this technology was widely adopted?</center>**
 
-# So what is the potential of Cloud computing? 
+<center>need to be **heard** and **discussed**.</center>
 
-When it comes to technology (Cloud Computing included) and the quick adoption of it. With a trustworthy and well aware partner and certified cloud provider on the side German companies are still able to deliver innovative products. But the timeline might shift slightly more into the future. 
+Through creating these scenarios and consequently the world we envision, we can leverage the technology to reach the desirable futures  that we want.
+
+# So what does that mean for Cloud Computing? 
+
+When it comes to technology (Cloud Computing included) and the quick adoption of it, companies need a trustworthy and well aware partner and certified cloud provider on their side. German companies are still able to deliver innovative products but the timeline might shift slightly more into the future. 
 
 This among other reasons is why cloud adoption in Germany is/was slower compared to other countries. The “German Angst” is very real, but it has the right to be there. Being a cautious, a little scared and critical of anything new, might even help German companies to deliver better and more secure products in the future! 
 
