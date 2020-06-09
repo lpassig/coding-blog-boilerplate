@@ -1,24 +1,24 @@
-> :Hero src=https://source.unsplash.com/g_gwdpsCVAY/1900x600,
+> :Hero src=https://source.unsplash.com/7Equ1tUYmps/1900x600,
 >       mode=light,
 >       target=desktop,
->       leak=156px
+>       leak=296px
 
-> :Hero src=https://source.unsplash.com/g_gwdpsCVAY/1200x600,
+> :Hero src=https://source.unsplash.com/7Equ1tUYmps/1200x600,
 >       mode=light,
 >       target=mobile,
 >       leak=96px
 
-> :Hero src=https://source.unsplash.com/qpemSW6_1Z0/1900x600,
+> :Hero src=https://source.unsplash.com/7Equ1tUYmps/1900x600,
 >       mode=dark,
 >       target=desktop,
->       leak=156px
+>       leak=296px
 
-> :Hero src=https://source.unsplash.com/qpemSW6_1Z0/1200x600,
+> :Hero src=https://source.unsplash.com/7Equ1tUYmps/1200x600,
 >       mode=dark,
 >       target=mobile,
 >       leak=96px
 
-> :Title shadow=0 0 8px black, color=black
+> :Title shadow=0 0 8px black, color=white
 >
 > German Angst or conservative innovation and its role in the Cloud Adoption!
 
@@ -79,7 +79,7 @@ This leads to a slow/er adoption rate of new *“innovative”* technology such 
 
 Resulting into the fact, that Germany with 22% was/is always below the avarage of 26%, when it comes to the use of cloud computing service.<sup id="a6">[6](#f6)</sup>
 
-![Eurostat](/img/Use_of_cloud_computing_services,_2014_and_2018_(%_of_enterprises).png)
+![Eurostat](/img/Use_of_cloud_computing_services.jpg)
 
 However, by acting like that **these companies might lose an important time** in the worldwide market disruption battle. To quote **C. William Pollard**<sup id="a7">[7](#f7)</sup> form his book *The Soul of the Firm*:
 
@@ -127,7 +127,7 @@ Let me know your thoughts!
 
 Cheers!
 
-## Sources 
+# Sources 
 
 <b id="f1">1</b> Tomasz Mroczkowski, Professor at the Department of Management (https://www.american.edu/kogod/faculty/mrocz.cfm) [↩](#a1)
 
