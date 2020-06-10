@@ -22,7 +22,13 @@
 >
 > German Angst or Conservative Innovation and its Role in the Cloud Adoption!
 
-> :Author   src=github
+>:Author   name=Lennart Passig,
+>           date=Wed Jun 10 2020,
+>           avatar:https://pbs.twimg.com/profile_images/1122088133468852224/cDILa8bZ_400x400.jpg,
+>           url=https://www.linkedin.com/in/lennart-passig-329430b8/
+
+<br>
+
 > :Author   name=Beenish Waris,
 >           date=Wed Jun 10 2020,
 >           avatar:https://pbs.twimg.com/profile_images/1140999958029590528/XLTQRvyz_400x400.jpg,
