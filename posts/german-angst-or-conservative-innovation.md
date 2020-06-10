@@ -22,7 +22,11 @@
 >
 > German Angst or Conservative Innovation and its Role in the Cloud Adoption!
 
-> :Author src=github
+> :Author   src=github
+> :Author   name=Beenish Waris,
+>           date=Wed Jun 10 2020,
+>           avatar:https://pbs.twimg.com/profile_images/1140999958029590528/XLTQRvyz_400x400.jpg,
+>           url=https://www.linkedin.com/in/beenish-waris-83abb5b1/          
 
 <br>
 
