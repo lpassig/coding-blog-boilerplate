@@ -40,7 +40,7 @@
 
 I often notice people working in the IT sector criticizing Germans or German companies for a lack of innovation. A perfect example of this perception is notable in the current discussions regarding the 5G network expansion plans of the German Government. 
 
-These discussions often result in quite heated and negative feedback in the comment sections of German newspapers or on social media in general. German companies or the German Government for that matter, are often considered slow and extremely cautious when it comes to innovation or adoption of new technology or processes. To put it in the words of **Tomasz Mroczkowski**<sup id="a1">[1](#f1)</sup>: 
+These discussions often result in quite heated and negative feedback in the comment sections of German newspapers or on social media in general. German companies or the German government for that matter, are often considered slow and extremely cautious when it comes to innovation or adoption of new technology or processes. To put it in the words of **Tomasz Mroczkowski**<sup id="a1">[1](#f1)</sup>: 
 
 >*“The country that invented the ‘triple-helix’, today is criticized for insufficient entrepreneurship and innovation, and for coddling university academics who are described as conservative, inward-looking, and resistant to change”*<sup id="a2">[2](#f2)</sup>
 
