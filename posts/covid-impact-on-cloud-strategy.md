@@ -26,7 +26,7 @@
 
 <br>
 
-In this article I explore some of the impacts and ideas that resulted because of COVID-19. Especially the impact on cloud strategies of companies is quite interesting. Also the willingness of companies to move workloads to the cloud, in times of a recession, might be different than what you would expect. 
+In this article I explore some some of the consequences of COVID-19. Especially the impact on cloud strategies of companies is quite interesting. Also the willingness of companies to move workloads to the cloud, in times of a recession, might be different than what you would expect. 
  
 # The plan before COVID-19
 Back in beginning of the year I talked to multiple customers about their goals and motivations when it comes to their cloud strategy. Asking them why they were considering or already migrating into the cloud, they very often mentioned one or more of the following triggers:
