@@ -25,7 +25,7 @@ So here are the latest posts:
 
 > :ArticleCard src=/successful-cloud-adoption-primer, style=box
 
-> :ArticleCard src=/successful-cloud-adoption-primer
+> :ArticleCard src=/covid-impact-on-cloud-strategy, style=box
 
 ---
 
