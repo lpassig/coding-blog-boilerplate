@@ -29,7 +29,7 @@
 In this article I explore some of the impacts and ideas that resulted because of COVID-19. Especially the impact on cloud strategies of companies is quite interesting. Also the willingness of companies to move workloads to the cloud, in times of a recession, might be different than what you would expect. 
  
 # The plan before COVID-19
-Back in beginning of the year I talked to multiple customers about their goals and motivations when it comes to their cloud strategy. Asking them why they were considering or already migrating into the cloud, they very often mentioned one or more of the following triggers: 
+Back in beginning of the year I talked to multiple customers about their goals and motivations when it comes to their cloud strategy. Asking them why they were considering or already migrating into the cloud, they very often mentioned one or more of the following triggers:
  
 - Cost savings
 - Datacenter exit
@@ -66,11 +66,13 @@ All these new requirements forced the adoption and usage of cloud technologies t
  
 # Time to move to the cloud?
  
-So is it still a wise decision to move application or even whole datacenters into the cloud? The short answer: Absolutely! 
+So is it still a wise decision to move application or even whole datacenters into the cloud? 
+
+The short answer: Absolutely! 
  
 For several customers the health crisis even increased their willingness to move workload into the cloud: 
  
->Adopting and scaling via cloud based services, confirmed their cloud strategy. The cloud allowed them to maintain *Business Continuity* whilst scaling massively in the backend. Something they couldn't have achieved On-Premise. 
+>Adopting and scaling via cloud based services, confirmed their cloud strategy. The cloud allowed them to maintain *Business Continuity* whilst scaling massively in the backend. Something they couldn't have achieved On-Premise.
  
 <center>The "new normal" requires a mixture of both types of cloud computing motivations: 
 </center>
@@ -91,7 +93,7 @@ Microsoft also recognized the current challenges and just recently published two
     
     https://azure.microsoft.com/de-de/blog/seven-ways-to-achieve-cost-savings-and-deliver-efficiencies-with-azure-infrastructure/ 
  
-If you want to know options on how to be become both: Innovative and cost efficient, whilst surviving the recession using Microsoft Azure have a chat with me and let's discuss.
+If you want to know options on how to be become both: Innovative and cost efficient, whilst surviving the recession let's shave a chat and discuss.
 
 Let me know what you think!
  
