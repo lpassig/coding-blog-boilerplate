@@ -26,43 +26,43 @@
 
 <br>
 
-In this article I would like to explore some of the impacts and ideas that resulted because of COVID-19. Especially the impact on the cloud strategy of companies is quite interesting and their willingness of moving workload in the cloud in times of a recession. 
+In this article I explore some of the impacts and ideas that resulted because of COVID-19. Especially the impact on cloud strategies of companies is quite interesting. Also the willingness of companies to move workloads to the cloud, in times of a recession, might be different than what you would expect. 
  
 # The plan before COVID-19
-Back in beginning of the year I talked to multiple customers about their goals and motivations when it comes to their cloud strategy. Very often they mentioned one or more of the following triggers, on why they were considering or already migrating into the cloud: 
+Back in beginning of the year I talked to multiple customers about their goals and motivations when it comes to their cloud strategy. Asking them why they were considering or already migrating into the cloud, they very often mentioned one or more of the following triggers: 
  
 - Cost savings
 - Datacenter exit
 - Merger, acquisition, or divestiture
  
->A more detailed list of potential cloud motivations can be found here: https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/strategy/motivations
+>A more detailed list of potential motivations for cloud can be found here: https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/strategy/motivations
  
 Most of these companies I talked to, already prepared for the case that Germany is sliding into a recession. This was already starting to show. For example in August 2019 <sup id="a1">[1](#f1)</sup> Deutsche Bank, said that it believes the economy is already in recession. 
+
+Since cutting costs and recessions go hand in hand, the motivations were well defined and the strategy was optimized towards cost saving. Some companies went even so far of announcing a *Cost-First* IT-strategy in contrast to the well-known *Cloud-First* IT-strategy.
+
+Additionally several customers I spoke to haven't renewed in their datacenters infrastructure in a while, resulting in the need for potentially huge monetary investments. This opened up the possibility of exploring the option of a datacenter exist. Meaning migrating the whole datacenter instead of investing or upgrading it. 
  
-Since cutting costs and recessions go hand in hand, the motivations were well defined and the strategy was optimized towards cost saving. Some companies went even so far of announcing a *"Cost-First"* IT-strategy in contrast to the well-knowN *"Cloud-First"* IT-strategy.
- 
-Additionally several customers I spoke to haven't upgraded in their datacenters in a while, resulting in potentially huge monetary investments in the datacenter infrastructure. This opened up the possibility of exploring the option of a datacenter exist, meaning mirating the whole datacenter instead of investing into it. 
- 
-Last but not least, mergers and acquisitions were always happening; And is a quite *usual suspect* when talking about motivations of doing why companies leverage the cloud. 
+Last but not least, mergers and acquisitions were always happening. And is a quite *usual suspect* when talking about motivations of doing why companies leverage the cloud. 
  
 # The plan after COVID-19
  
 The COVID-19 pandemic has had an impact on every person, company, and country worldwide. Plans and strategies have been thrown out of the window and companies had to adjust quickly. A new way of working was necessary and had to be established fast!
  
-All of a sudden, motivations like the ones listed below became far more popular than the previously mentioned ones: 
+All of a sudden, motivations like the ones listed below became far more popular:
  
 - Scaling to meet market demands
 - Scaling to meet geographic demands
 - Preparation for new technical capabilities
  
-The need for companies to scale without the need of employees to be onsite  or in the office grew massively! The business functions needed to continue as usual and became way more important. Meaning *Business Continuity* was and still is a top priority for CEO's and CIO's alike. 
+The need for companies to scale IT without the employees being onsite or in the office, grew massively! The business functions needed to continue as usual and became way more important. Meaning *Business Continuity* was and still is a top priority for CEO's and CIO's alike. 
  
 Applications and processes needed to work from the employees home, however German companies were not really prepared for this as a survey from Bitkom suggests. They found out that in 2018 only four in ten companies even offered the possibility of doing home office.
  
 ![HomeOffice](/img/Homeoffice_Germany.png)
 Title: *Four out of ten companies rely on home office*
  
-These new requirements forced the adoption and usage of cloud technologies throughout the bench! Let it be to allow collaboration within the company or by using cloud to  transform applications to make them accessible from home.
+All these new requirements forced the adoption and usage of cloud technologies throughout the bench! Let it be to allow collaboration within the company or by using cloud to  transform applications to make them accessible from home.
  
 # Time to move to the cloud?
  
@@ -72,7 +72,12 @@ For several customers the health crisis even increased their willingness to move
  
 >Adopting and scaling via cloud based services, confirmed their cloud strategy. The cloud allowed them to maintain *Business Continuity* whilst scaling massively in the backend. Something they couldn't have achieved On-Premise. 
  
-The *"new normal"* requires a mixture of booth motivations: Innovation **and** cost savings. There is an interesting article on that, with the headline *With Innovation out of the Crisis*<sup id="a2">[2](#f2)</sup>. Here the CIO of ZF (The world's fifth largest automotive supplier and leading manufacturer of drive, chassis and safety technology) explains among other things how: 
+<center>The "new normal" requires a mixture of both types of cloud computing motivations: 
+</center>
+
+**<center><blockquote>Innovation and cost savings!</center></blockquote>**
+
+There is an interesting article on that, with the headline *With Innovation out of the Crisis* <sup id="a2">[2](#f2)</sup>. In this article the CIO of ZF (The world's fifth largest automotive supplier and leading manufacturer of drive, chassis and safety technology) explains among other things how: 
  
 >"... the IT becomes the "*Field Enabler*" and provides for example the development platforms".
  
@@ -86,8 +91,8 @@ Microsoft also recognized the current challenges and just recently published two
     
     https://azure.microsoft.com/de-de/blog/seven-ways-to-achieve-cost-savings-and-deliver-efficiencies-with-azure-infrastructure/ 
  
-These upon other materials can help customers to  become booth: Innovative and cost efficient whilst surviving the recession. 
- 
+If you want to know options on how to be become both: Innovative and cost efficient, whilst surviving the recession using Microsoft Azure have a chat with me and let's discuss.
+
 Let me know what you think!
  
 Cheers!
