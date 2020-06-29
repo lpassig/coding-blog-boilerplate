@@ -32,7 +32,7 @@ When you are designing solutions or workloads in Azure it is quite common to mak
 The Azure Well-Architected Framework is a set of guiding principles, recommendations and approaches that can be used to improve the quality of your  workload. The framework consists of five pillars of architecture excellence: Cost Optimization, Operational Excellence, Performance Efficiency, Reliability, and Security.
 
 ## Cost Optimization
-As a wrote already in one of my previous blog post, transparency and especially cost transparency is crucial when building a solution in the cloud. The idea of becoming a Profit Center instead of a Cost Center is quite important. 
+As a wrote already in one of my [previous blog posts](https://lennart.coding.blog/successful-cloud-adoption-primer), transparency and especially cost transparency is crucial when building a solution in the cloud. The idea of becoming a Profit Center instead of a Cost Center is quite important. 
 
 **<center><blockquote>Managing costs to maximize the value delivered!</center></blockquote>**
 
@@ -54,7 +54,7 @@ Performance Efficiency is the ability of your workload to scale to meet the dema
 
 **<center><blockquote>The ability of a system to adapt to changes in load!</center></blockquote>**
 
-Designing solutions to *horizontal scale* (scaling out) instead of vertically scaling (scaling up) is one of many best practices to increase the performance and be efficient as well. 
+Designing solutions to *horizontal scale* (scaling out) instead of vertical scaling (scaling up) is one of many best practices to increase the performance while being efficient. 
 
 Find more information [here](https://docs.microsoft.com/en-us/azure/architecture/framework/scalability/overview) !
 
@@ -78,7 +78,7 @@ Find more information [here](https://docs.microsoft.com/en-us/azure/architecture
 
 # Microsoft Azure Well-Architected Review
 
-To easily examine your workload through the lenses of: reliability, cost management, operational excellence, security and performance efficiency a review assessment is available. Going through the whole process takes about 20 minutes, if you choose to check your workload against all five pillars.
+To easily examine your workload through the lenses of: reliability, cost management, operational excellence, security and performance efficiency a review assessment is available. Going through the whole assessment process takes about 20 minutes, if you choose to check your workload against all five pillars.
 
 ## Start the Assessment
 Using [this link](https://docs.microsoft.com/en-us/assessments/?mode=pre-assessment&id=azure-architecture-review) your can start the assessment respectively the review process straight away! The review itself can be customized and configured according to your needs. 
@@ -93,24 +93,26 @@ The questions as well as the answers can be quite detailed and can have multiple
 
 ![Azure Well Architected Start](/img/AWA_OpEx.PNG)
 
-The questions and answers were written to assess most workload. However, they fit best if you have chosen a cloud native architecture.  
+ Since the questionaire has several questions and answers that can require certain domain knowlegde be sure you have the right stakeholders available that can answer those questions. The assessment was developed to assess most cloud based workload. However, they fit best if you have chosen a cloud native architecture.  
 
 ## Results and Recommendations  
 
-After all questions have been answered a result is being created based on your replies. Depending on your answers you will end up with a result similar to the one below, rating my overall solution design moderate.   
+After all questions have been answered a result is being created based on your replies. Depending on your answers you might end up with a result similar to the one below, rating my overall solution design *moderate*.   
 
 ![Azure Well Architected Start](/img/AWA_Recommend.PNG)
 
-As seen here I might want to check the category of *Performance Efficiency* and *Reliability* to improve my workload. By diving deeper into the categories, I get a good overview of actions that improve my solution further. 
+As seen in the picture above I might want to check the category of *Performance Efficiency* and *Reliability* to improve my workload further. By diving deeper into the categories, I get a good overview of the actions needed to improve my solution.  
 
 ![Azure Well Architected Start](/img/AWA_Improve.PNG)
 
-The recommended actions link to the Azure Architecture Center documentation that the Well-Architected Framework is a part of. Using the action links you can do a more targeted exploring of the content.  
+The recommended actions above link to the Azure Architecture Center documentation, since the Well-Architected Framework is a part of this part of the documentation. Using the action links you can do a more targeted exploring of the content instead of loosely searching for best practices.  
 
 # Closing
-Visit the Microsoft Azure Well-Architected Framework [Landing page](https://docs.microsoft.com/en-us/azure/architecture/framework/) to explore the content. If you want to assess your workload you can do so by browsing the linke [here](https://docs.microsoft.com/en-us/assessments/?mode=pre-assessment&id=azure-architecture-review), this allows you to only dig into the content that is relevant to you.
+Visit the Microsoft Azure Well-Architected Framework [Landing page](https://docs.microsoft.com/en-us/azure/architecture/framework/) to generally explore the content and learn more about the goal of this framework. 
 
-Back in May 2020 at the Microsoft Build, the PM's of the Framework did a deep dive on the *Cost Optimization* pillar. You can find the recording of this session  [here](https://channel9.msdn.com/Events/Build/2020/INT119) !
+If you want to assess your workload you can do so by browsing the linke [here](https://docs.microsoft.com/en-us/assessments/?mode=pre-assessment&id=azure-architecture-review), this allows you to only dig into the content that is relevant to you.
+
+Back in May 2020 (at the Microsoft Build conference) the PM's of the Framework did a deep dive on the *Cost Optimization* pillar. You can find the recording of this session [here](https://channel9.msdn.com/Events/Build/2020/INT119) !
 
 If you are in the beginning of your cloud journey try out the [Cloud Journey Tracker](https://docs.microsoft.com/en-us/assessments/?id=cloud-journey-tracker) tool and see what kind of things are missing e.g. in your cloud strategy. 
 

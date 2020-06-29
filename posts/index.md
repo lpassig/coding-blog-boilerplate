@@ -27,6 +27,8 @@ So here are the latest posts:
 
 > :ArticleCard src=/covid-impact-on-cloud-strategy, style=box
 
+> :ArticleCard src=/pillars-of-well-architected-azure-workloads, style=box 
+
 ---
 
 # Docs
