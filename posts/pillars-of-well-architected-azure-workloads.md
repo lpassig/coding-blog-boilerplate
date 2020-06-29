@@ -110,7 +110,7 @@ The recommended actions above link to the Azure Architecture Center documentatio
 # Closing
 Visit the Microsoft Azure Well-Architected Framework [Landing page](https://docs.microsoft.com/en-us/azure/architecture/framework/) to generally explore the content and learn more about the goal of this framework. 
 
-If you want to assess your workload you can do so by browsing the linke [here](https://docs.microsoft.com/en-us/assessments/?mode=pre-assessment&id=azure-architecture-review), this allows you to only dig into the content that is relevant to you.
+If you want to assess your workload you can do so by browsing the link [here](https://docs.microsoft.com/en-us/assessments/?mode=pre-assessment&id=azure-architecture-review), this allows you to only dig into the content that is relevant to you.
 
 Back in May 2020 (at the Microsoft Build conference) the PM's of the Framework did a deep dive on the *Cost Optimization* pillar. You can find the recording of this session [here](https://channel9.msdn.com/Events/Build/2020/INT119) !
 
