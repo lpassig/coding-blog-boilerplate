@@ -26,7 +26,7 @@
 
 <br>
 
-When you are designing solutions or workloads in Azure it is quite common to make mistakes and not follow best practices throughout the whole process. Meaning, you will probably end up with a working solutions, but there will be room for improvement. To tackle these issues, Microsoft came up with the Azure Well-Architected Framework. 
+When you are designing solutions or workloads in Azure it is quite common to make mistakes and not follow best practices throughout the whole process. Meaning, you will probably end up with a working solution, but there will be room for improvement. To tackle these issues, Microsoft came up with the Azure Well-Architected Framework. 
 
 # Microsoft Azure Well-Architected Framework
 The Azure Well-Architected Framework is a set of guiding principles, recommendations and approaches that can be used to improve the quality of your  workload. The framework consists of five pillars of architecture excellence: Cost Optimization, Operational Excellence, Performance Efficiency, Reliability, and Security.
