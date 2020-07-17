@@ -23,6 +23,8 @@ Lennart started working as a System Administrator in the Exchange and Active Dir
 
 So here are the latest posts:
 
+> :ArticleCard src=/AzureCostManagementFunction, style=box
+
 > :ArticleCard src=/successful-cloud-adoption-primer, style=box
 
 > :ArticleCard src=/covid-impact-on-cloud-strategy, style=box
