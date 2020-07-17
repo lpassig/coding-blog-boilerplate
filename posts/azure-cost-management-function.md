@@ -204,7 +204,7 @@ The second option is a project from our consulting services colleaugs that publi
  
 # Closing 
  
-Developing this solution as well as writing this blog post was quite "quick and dirty" so if there are issues feel free to create an I in the github repository (https://github.com/lpassig/CostManagementFunction) and as always. Let me know what you think! 
+Developing this solution as well as writing this blog post was quite "quick and dirty" so if there are issues feel free to create an I in the github repository (https://github.com/lpassig/CostManagementFunction) and as always: Let me know what you think!
  
 ## Sources
 <b id="f1">1</b> Techcommunity blog post from Helder Pinto (https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/augmenting-azure-advisor-cost-recommendations-for-automated/ba-p/1339298) [↩](#a1)
