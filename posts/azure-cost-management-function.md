@@ -127,7 +127,7 @@ function Get-CostManagement($sub, $headers, $budgetname, $costCenterTag, $curren
     ...
 }
 ```
-The tricky part is to find the "/views/render" action. I did find it  using the developer tools in the new MS Edge Browser, that is based on Chromium. I found the API action and the payload needed to create a PNG. I simply recreated the REST call by using the `Invoke-WebRequest` cmdlet and "voila" it worked! :)  
+The tricky part is to find the "/views/render" action. I did find it using the developer tools (https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide) in the new MS Edge Browser, that is based on Chromium. I found the API action and the payload needed to create a PNG of a custom cost dashboard. I simply recreated the REST call by using the `Invoke-WebRequest` cmdlet and "voila" it worked! :)  
  
 ## Azure Advisor API
  
@@ -176,11 +176,11 @@ $AdvisorRecommendationsUri = "https://management.azure.com/subscriptions/$sub/pr
  
 ## The result 
  
-If everything works out and all the prerequisites (find them in the the `run.ps1` file) the resulting e-mail that is sent, should look something like this: 
+If everything works out and all the prerequisites (find them in the the `run.ps1` file) are met, the resulting e-mail that is sent. The e-mail should look something like this: 
  
 ![CostManagementFunction](/img/CostManagementFunction.jpg)
  
-## the deployment
+## The deployment
  
 It's quite straight forward: 
  
