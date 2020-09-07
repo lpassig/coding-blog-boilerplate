@@ -26,7 +26,7 @@
  
 <br>
 
-I have often seen customers struggle to scale when it comes to creating Azure Subscriptions. This is one of the reasons I developed a small #AzureFunction in combination with Microsoft Power Automate and Microsoft Forms to help tackle this challenge. I wanted to demonstrate a way on how to enable the creation of Azure Subscriptions with self service in mind, while leveraging concepts/frameworks like Enterprise-Scale<sup id="a1">[1](#f1)</sup> or others<sup id="a2">[2](#f2)</sup> in the backend.   
+I have often seen customers struggle to scale when it comes to creating Azure Subscriptions. This is one of the reasons I developed a small Azure Function in combination with Microsoft Power Automate and Microsoft Forms to help tackle this challenge. I wanted to demonstrate a way on how to enable the creation of Azure Subscriptions with self service in mind, while leveraging concepts/frameworks like Enterprise-Scale<sup id="a1">[1](#f1)</sup> or others<sup id="a2">[2](#f2)</sup> in the backend.   
  
 # Prerequisites 
 The solution is based on three different services that work across the multiple Microsoft clouds. This allows a quite seamless integration between the user input and the technical implementation. The services used are:   
