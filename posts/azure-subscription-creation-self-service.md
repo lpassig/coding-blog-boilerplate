@@ -113,6 +113,22 @@ The body should be formated like a JSON document:
   "owner": "@{outputs('Get_response_details')?['body/responder']}"
 }
 
+### Possible Improvements 
+
+To additionally approve the Integration/Workflow there are some point to quite easily improve this MVP. There 
+
+1. Approval Workflow 
+THere
+
+This can be configured similar to this: 
+![Approval](/img/Approval1.PNG)
+
+Find more info here: https://docs.microsoft.com/en-us/power-automate/create-approval-response-options
+
+1. Welcome Mail
+
+sssss
+![PowerPlatform](/img/Email1.PNG)
 
 ## Azure Function
 
