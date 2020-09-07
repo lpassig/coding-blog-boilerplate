@@ -87,7 +87,7 @@ The created Microsoft form can be found and duplicated here:
 
 This minimal set of questions asked are needed to have a general understanding of the use case. Additionally they are needed to decide to which management group the created subscription should be moved. 
 
-## Power Powerplatform
+## Power Platform
  
 After the questionaire/form has been created we need to integrate it with the Power Platform in order to create a workflow. This integration needs a minimum of three steps. 
 
@@ -114,52 +114,165 @@ The body should be formated like a JSON document:
 }
 
 
+## Azure Function
 
-All of a sudden, motivations like the ones listed below became far more popular:
- 
-- Scaling to meet market demands
-- Scaling to meet geographic demands
-- Preparation for new technical capabilities
- 
-The need for companies to scale IT without the employees being onsite or in the office, grew massively! The business functions needed to continue as usual and became way more important. Meaning *Business Continuity* was and still is a top priority for CEO's and CIO's alike. 
- 
-Applications and processes needed to work from the employees home, however German companies were not really prepared for this as a survey from Bitkom suggests. They found out that in 2018 only four in ten companies even offered the possibility of doing home office.
- 
-![HomeOffice](/img/Homeoffice_Germany.png)
-Title: *Four out of ten companies rely on home office*
- 
-All these new requirements forced the adoption and usage of cloud technologies throughout the bench! Let it be to allow collaboration within the company or by using cloud to  transform applications to make them accessible from home.
- 
-# Time to move to the cloud?
- 
-So is it still a wise decision to move application or even whole datacenters into the cloud? 
+In order for the function to work, the following  
 
-The short answer: Absolutely! 
- 
-For several customers the health crisis even increased their willingness to move workload into the cloud: 
- 
->Adopting and scaling via cloud based services, confirmed their cloud strategy. The cloud allowed them to maintain *Business Continuity* whilst scaling massively in the backend. Something they couldn't have achieved On-Premise.
- 
-<center>The "new normal" requires a mixture of both types of cloud computing motivations: 
-</center>
+1. (One time Task): You must have an Owner role on an Enrollment Account to create a subscription: Grant access to create Azure Enterprise subscriptions to the Managed Service Identity/Service Principal (using the object ID) of the Azure Function See: https://docs.microsoft.com/en-us/azure/cost-management-billing/manage/grant-access-to-create-subscription?tabs=azure-powershell%2Cazure-powershell-2
 
-**<center><blockquote>Innovation and cost savings!</center></blockquote>**
+2. Management Groups (that will be leveraged in the Function) need to exists! 
 
-There is an interesting article on that, with the headline *With Innovation out of the Crisis* <sup id="a2">[2](#f2)</sup>. In this article the CIO of ZF (The world's fifth largest automotive supplier and leading manufacturer of drive, chassis and safety technology) explains among other things how: 
- 
->"... the IT becomes the "*Field Enabler*" and provides for example the development platforms".
- 
-Microsoft also recognized the current challenges and just recently published two blog articles on those topics: 
- 
-1. **Optimize your Azure costs to help meet your financial objectives** 
-   
-   https://azure.microsoft.com/de-de/blog/optimize-your-azure-costs-to-help-meet-your-financial-objectives/ 
-   
-2. **Seven ways to achieve cost savings and deliver efficiencies with Azure infrastructure**
-    
-    https://azure.microsoft.com/de-de/blog/seven-ways-to-achieve-cost-savings-and-deliver-efficiencies-with-azure-infrastructure/ 
- 
-If you want to know options on how to be become both: Innovative and cost efficient, whilst surviving the recession let's shave a chat and discuss.
+3. Microsoft Forms and Power Automate need to exist and and properly configured for the Input data 
+
+```
+...
+#
+##
+###    Create Azure Subscription for Bootstrapping 
+##
+#
+
+[String]$ProjectName = $Request.Body.projectname.Replace(' ', '').ToLower()
+
+If($Request.Body.environment -like "Production"){
+    $Environment = "prod"
+}
+If($Request.Body.environment -like "Testing"){
+    $Environment = "test"
+}
+If($Request.Body.environment -like "Development"){
+    $Environment = "dev"
+}
+If($Request.Body.environment -like "Sandbox"){
+    $Environment = "sbox"
+}
+
+# Build SubscriptionName
+$SubscriptionName ="sub-$OrganizationName-$ProjectName-$Environment"
+
+# Define Subscription Offer Type
+
+    # MS-AZR-0017P for EA-Subscription
+    # MS-AZR-0148P for Dev/Test Subscriptions (MSDN Licences needed)
+
+If($Request.Body.msdn -like "No"){
+    $OfferType = "MS-AZR-0017P"
+}
+else{
+    $OfferType = "MS-AZR-0148P"
+}
+
+# Get Object ID of the Managed Service Identity/Service Principal  
+$EnrollmentId = (Get-AzEnrollmentAccount).ObjectId
+
+# Create Subscription 
+$NewSubscription = New-AzSubscription -OfferType $OfferType -Name $SubscriptionName -EnrollmentAccountObjectId $EnrollmentId -OwnerSignInName $Request.Body.owner
+
+# Wait for the subscription to be created 
+Start-Sleep -Seconds 10
+
+#Log Subscription Details
+Write-Output "New subscription:" $NewSubscription | ConvertTo-Json | Write-Output
+
+#
+##
+###    Move Azure Subscription to Management Group
+##
+#
+
+# Get created subscription  
+
+$consistent = $false
+    $loops = 0
+
+    while (-not $consistent) {
+        $subscription = $null
+        try {
+            $Subscription = Get-AzSubscription -SubscriptionName $SubscriptionName
+        }
+        catch {
+            $subscription = $null
+            if ($loops -eq 30) {
+                throw "Took too long for subscription to become consistent."
+            }
+            Write-Output "Loop: $loops"
+            Start-Sleep -Seconds 1
+        }
+        if ($null -ne $subscription) {
+            $consistent = $true
+        }
+        $loops++
+    }
+
+# Move subscription to correlating Management Group for further bootstrapping (either using Enterprise Scale or Azure Bluepint)
+New-AzManagementGroupSubscription -GroupName $Environment -SubscriptionId $Subscription.Id
+
+# Wait for the subscription to be moved 
+Start-Sleep -Seconds 10
+
+#
+##
+###    Define subscription tags
+##
+#
+
+# Define Naming for Tags
+$company_costcenter = "$OrganizationName"+"_costcenter"
+$company_managedby = "$OrganizationName"+"_managedby"
+$company_complianceLevel = "$OrganizationName"+"_complianceLevel"
+$company_project_app_name =  "$OrganizationName"+"_project_app_name"
+$company_subscription_requestor = "$OrganizationName"+"subscription_requestor"
+$company_environment = "$OrganizationName"+"_environment"
+$company_criticality = "$OrganizationName"+"_criticality"
+$company_confidentiality = "$OrganizationName"+"_confidentiality"
+$company_reviewdate = "$OrganizationName"+"_reviewdate"
+$company_maintenancewindow =  "$OrganizationName"+"_maintenancewindow"
+$company_external_partner = "$OrganizationName"+"_external_partner"
+
+# Define Tag Table 
+If($Request.Body.partner -like ""){
+$tags = @{
+    "$company_costcenter"=$Request.Body.costcenter;
+    "$company_managedby"=$Request.Body.managedby;
+    "$company_complianceLevel"=$Request.Body.compliance;
+    "$company_project_app_name"=$Request.Body.projectname;
+    "$company_subscription_requestor"=$Request.Body.owner
+    "$company_environment"=$Request.Body.environment;
+    "$company_criticality"=$Request.Body.criticality;
+    "$company_confidentiality"=$Request.Body.confidentiality;
+    "$company_reviewdate"="TBD";
+    "$company_maintenancewindow"="TBD";
+    }
+}
+else{
+$tags = @{
+    "$company_costcenter"=$Request.Body.costcenter;
+    "$company_managedby"=$Request.Body.managedby;
+    "$company_complianceLevel"=$Request.Body.compliance;
+    "$company_project_app_name"=$Request.Body.projectname;
+    "$company_subscription_requestor"=$Request.Body.owner
+    "$company_environment"=$Request.Body.environment;
+    "$company_criticality"=$Request.Body.criticality;
+    "$company_confidentiality"=$Request.Body.confidentiality;
+    "$company_reviewdate"="TBD";
+    "$company_maintenancewindow"="TBD";
+    "$company_external_partner"=$Request.Body.partner;
+    }    
+}
+
+#
+##
+###    Assign initial subscription tags
+##
+#
+
+$subid = $subscription.Id
+# Assign Tags
+New-AzTag -ResourceId "/subscriptions/$subid" -Tag $tags
+...
+```
+
+The complete function can be found here: https://github.com/lpassig/SubscriptionCreation 
 
 Let me know what you think!
  
