@@ -40,7 +40,7 @@ In the next couple of paragraphes we will dive deeper into the different service
 ## Microsoft Form 
 To enable the self-service of subscription creation we need to have some sort of Input mask that we can use to get some general data from the requestor. One of the easiest options is to go ahead and use Microsoft Forms for this use case. Using https://forms.office.com/ you can easily create a from by like the one you see below: 
 
-![Forms](/img/Forms1.png)
+![MS Forms](/img/Forms1.PNG)
 
 The form itself can easily be shared and and customized to meet your questions and requirements. Additionally it has already an integration with Azure (AD) and therefore, the requestor can be identified quite easily. For my questionaire/form I chose the following questions: 
 
