@@ -128,7 +128,7 @@ To additionally approve the Integration/Workflow and make it more Enterprise rea
 In order to allow a minimum set of Governance, an Approval workflow might be needed to serve as a gatekeeper. This can be configured similar to this: 
 ![Approval](/img/Approval1.PNG)
  
-Furthermore, you could branch the actions when it comes to Sandbox Subscriptions, in order for them to be created straight away without a Subscription. 
+Furthermore, you could branch actions when the requestor wants a Sandbox Subscription, to create the subscription straight away without the need for an approval. 
 Find more information about how to create an approval action/workflow here: https://docs.microsoft.com/en-us/power-automate/create-approval-response-options
  
 1. Welcome or getting started Mail
@@ -303,7 +303,7 @@ The complete function can be found and forked/cloned here: https://github.com/lp
  
 Using the Microsoft cloud services you can easily create a self service portal for your company to create Azure subscription. Additionally, you can download and analyze the input data on the Forms quite easy:    
  
-![Overview](/img/FormOverview1.PNG)
+![Overview](/img/FromOverview1.PNG)
  
 However, this approach has also its limits and if you have a service management tool in place you might want to use this one instead to implement the workflow.    
  
