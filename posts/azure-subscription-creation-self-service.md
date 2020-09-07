@@ -44,23 +44,77 @@ To enable the self-service of subscription creation we need to have some sort of
 
 The form itself can easily be shared and and customized to meet your questions and requirements. Additionally it has already an integration with Azure (AD) and therefore, the requestor can be identified quite easily. For my questionaire/form I chose the following questions: 
 
-1. Enter your Cost Center: (Free Text)
-2. Enter Project / Use Case / App Name: (Free Text)
+> 1. Enter your Cost Center: 
+>    <br>(Free Text)
+> 2. Enter Project / Use Case / App Name: 
+>    <br>(Free Text)
+> 3. Enter Organization or Team Name: 
+>    <br>(Free Text)
+> 4. Choose the environment stage of your Project / Use Case / App: 
+>    <br>(Choose)
+>    <br>Production
+>    <br>Testing
+>    <br>Development
+>    <br>Sandbox
+> 5. Choose compliance requirement:
+>    <br>(Choose)
+>    <br>High (e.g. GDPR)
+>    <br>Medium (e.g. ISO Compliance)
+>    <br>Low (e.g. Corporate Compliance)
+>    <br>None (e.g. Sandbox)
+> 6. Choose the business criticality of your Project / Use Case / App:
+>    <br>(Choose)
+>    <br>High
+>    <br>Medium
+>    <br>Low
+>    <br>None (e.g. Sandbox)
+> 7. Choose the data confidentiality of your Project / Use Case / App:
+>    <br>(Choose)
+>    <br>High
+>    <br>Medium
+>    <br>Low
+>    <br>None (e.g. Sandbox)
+> 8. My Use Case or Application is Dev/Test related and all developers do have a valid MSDN licence
+>    <br>(Choose)
+>    <br>Yes
+>    <br>No
+> 9. Enter the name(s) of any helping external partner(s) (if exist): 
+>    <br>(Free Text)
+>
+
+The created Microsoft form can be found and duplicated here:
+<br>https://forms.office.com/Pages/ShareFormPage.aspx?id=yhBjFeK3GEShsVflrr9qJwRTHhnL69ROqdmQTMjmO9NUM1I0WUlJWEZIV0pRTEVaSFk4QkpZTlNNVC4u&sharetoken=rMxBljCWPjxop8s7hXyC
+
+This minimal set of questions asked are needed to have a general understanding of the use case. Additionally they are needed to decide to which management group the created subscription should be moved. 
+
+## Power Powerplatform
+ 
+After the questionaire/form has been created we need to integrate it with the Power Platform in order to create a workflow. This integration needs a minimum of three steps. 
+
+1. Get/Read the created Forms response 
+2. Get response details 
+3. Excecute a HTTP trigger 
+
+The final result should look something like this: 
+
+![PowerPlatform](/img/PowerPlatform1.png)
+
+The body should be formated like a JSON document: 
+{
+  "costcenter": "@{outputs('Get_response_details')?['body/rd43742f58a6945a5833a8140a8c6a07f']}",
+  "compliance": "@{outputs('Get_response_details')?['body/r3f5e95d4fa0d476a9dc71f90c1ba10f7']}",
+  "environment": "@{outputs('Get_response_details')?['body/r477d171f09854617a46bafe6e1fe31ce']}",
+  "managedby": "@{outputs('Get_response_details')?['body/r36caba56e4954176af8f5a47ffae9f89']}",
+  "projectname": "@{outputs('Get_response_details')?['body/r77e98d66187c42e0a85bbcd4a830fbb1']}",
+  "criticality": "@{outputs('Get_response_details')?['body/r81e76dab7d494e00b350d3282c300b8d']}",
+  "confidentiality": "@{outputs('Get_response_details')?['body/r4a44db97a10d479c86bae58cb09824ec']}",
+  "msdn": "@{outputs('Get_response_details')?['body/r9073f32b4b384d949159fe521f5045d1']}",
+  "partner": "@{outputs('Get_response_details')?['body/r081532d229bc44a3b13b2fc1c68ca1ac']}",
+  "owner": "@{outputs('Get_response_details')?['body/responder']}"
+}
 
 
- 
-Most of these companies I talked to, already prepared for the case that Germany is sliding into a recession. This was already starting to show. For example in August 2019 <sup id="a1">[1](#f1)</sup> Deutsche Bank, said that it believes the economy is already in recession. 
 
-Since cutting costs and recessions go hand in hand, the motivations were well defined and the strategy was optimized towards cost saving. Some companies went even so far of announcing a *Cost-First* IT-strategy in contrast to the well-known *Cloud-First* IT-strategy.
-
-Additionally several customers I spoke to haven't renewed in their datacenters infrastructure in a while, resulting in the need for potentially huge monetary investments. This opened up the possibility of exploring the option of a datacenter exist. Meaning migrating the whole datacenter instead of investing or upgrading it. 
- 
-Last but not least, mergers and acquisitions were always happening. And is a quite *usual suspect* when talking about motivations of doing why companies leverage the cloud. 
- 
-# The plan after COVID-19
- 
-The COVID-19 pandemic has had an impact on every person, company, and country worldwide. Plans and strategies have been thrown out of the window and companies had to adjust quickly. A new way of working was necessary and had to be established fast!
- 
 All of a sudden, motivations like the ones listed below became far more popular:
  
 - Scaling to meet market demands
