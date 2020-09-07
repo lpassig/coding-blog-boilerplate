@@ -26,13 +26,13 @@
 
 <br>
 
-I often see customers struggle to scalewhen it comes to the task of creating Azure Subscriptions. This one of the reasons why I developed a small Azure Function in combination with the Microsoft Power Platfrom and as well as Microsoft Forms. I want to show a way on how to enable the creation of Azure Subscriptions with self service in mind, whist also leveraging concepts/frameworks like Enterprise-Scale<sup id="a1">[1](#f1)</sup> or others<sup id="a2">[2](#f2)</sup> in the backend.   
+I often see customers struggle to scalewhen it comes to the task of creating Azure Subscriptions. This one of the reasons why I developed a small Azure Function in combination with the Microsoft Power Automate and as well as Microsoft Forms. I want to show a way on how to enable the creation of Azure Subscriptions with self service in mind, whist also leveraging concepts/frameworks like Enterprise-Scale<sup id="a1">[1](#f1)</sup> or others<sup id="a2">[2](#f2)</sup> in the backend.   
  
-# The Prereqitisites 
+# Prereqitisites 
 The solution is based on three different services that work across the multiple Microsoft clouds. This allows a quite seamless integration between the user input and the technical implementation. The services used are:   
    
 1. Microsoft Forms
-2. Microsoft Power Platform 
+2. Microsoft Power Automate 
 3. Azure Functions
 
 In the next couple of paragraphes we will dive deeper into the different services and how to configure them. 
@@ -85,11 +85,13 @@ The form itself can easily be shared and and customized to meet your questions a
 The created Microsoft form can be found and duplicated here:
 <br>https://forms.office.com/Pages/ShareFormPage.aspx?id=yhBjFeK3GEShsVflrr9qJwRTHhnL69ROqdmQTMjmO9NUM1I0WUlJWEZIV0pRTEVaSFk4QkpZTlNNVC4u&sharetoken=rMxBljCWPjxop8s7hXyC
 
-This minimal set of questions asked are needed to have a general understanding of the use case. Additionally they are needed to decide to which management group the created subscription should be moved. 
+This minimal set of questions asked are needed to have a general understanding of the use case. Additionally those questions are needed to decide to which management group the created subscription should be moved. 
 
-## Power Platform
+> Please be sure, that you share the Microsoft Form only within your company and *not* make it public! 
+
+## Power Automate
  
-After the questionaire/form has been created we need to integrate it with the Power Platform in order to create a workflow. This integration needs a minimum of three steps. 
+After the questionaire/form has been created, we need to integrate it with the Power Automate in order to create a workflow that triggers the function whenever a response is beeing created. This integration needs a minimum of three steps. 
 
 1. Get/Read the created Forms response 
 2. Get response details 
@@ -97,48 +99,55 @@ After the questionaire/form has been created we need to integrate it with the Po
 
 The final result should look something like this: 
 
-![PowerPlatform](/img/PowerPlatform1.png)
+![PowerAutomate](/img/PowerPlatform1.png)
 
-The body should be formated like a JSON document: 
-{
-  "costcenter": "@{outputs('Get_response_details')?['body/rd43742f58a6945a5833a8140a8c6a07f']}",
-  "compliance": "@{outputs('Get_response_details')?['body/r3f5e95d4fa0d476a9dc71f90c1ba10f7']}",
-  "environment": "@{outputs('Get_response_details')?['body/r477d171f09854617a46bafe6e1fe31ce']}",
-  "managedby": "@{outputs('Get_response_details')?['body/r36caba56e4954176af8f5a47ffae9f89']}",
-  "projectname": "@{outputs('Get_response_details')?['body/r77e98d66187c42e0a85bbcd4a830fbb1']}",
-  "criticality": "@{outputs('Get_response_details')?['body/r81e76dab7d494e00b350d3282c300b8d']}",
-  "confidentiality": "@{outputs('Get_response_details')?['body/r4a44db97a10d479c86bae58cb09824ec']}",
-  "msdn": "@{outputs('Get_response_details')?['body/r9073f32b4b384d949159fe521f5045d1']}",
-  "partner": "@{outputs('Get_response_details')?['body/r081532d229bc44a3b13b2fc1c68ca1ac']}",
-  "owner": "@{outputs('Get_response_details')?['body/responder']}"
-}
+The first step is quite easy, we just need to connect to the Microsoft Forms service and choose the form that we have created beforehand. The action or initial trigger is called ```When a new response is submitted```. After this step, we need to get the detailed responses from the requstor, this can be achieved using the action ```Get response details```. In this step we can publish the detailed responses into the next action using ```Response Id```.
+
+Eventually, we need to send the detailed responses in a JSON format to the Azure function using the ```HTTP``` action. (Be aware that you need *Power Automate Premium*<sup id="a3">[3](#f3)</sup> for this action. To call the funciton we can use diffenrent methods of authentication, I chose a rather simple one by using a created *Function Key* in the URI field. The ```body``` of the HTTP request should be formated like a JSON document in oder to function properly: 
+
+>{
+> "costcenter": "@{outputs('Get_response_details')?['body/rd43742f58a6945a5833a8140a8c6a07f']}",
+>  "compliance": "@{outputs('Get_response_details')?['body/r3f5e95d4fa0d476a9dc71f90c1ba10f7']}",
+>  "environment": "@{outputs('Get_response_details')?['body/r477d171f09854617a46bafe6e1fe31ce']}",
+>  "managedby": "@{outputs('Get_response_details')?['body/r36caba56e4954176af8f5a47ffae9f89']}",
+>  "projectname": "@{outputs('Get_response_details')?['body/r77e98d66187c42e0a85bbcd4a830fbb1']}",
+> "criticality": "@{outputs('Get_response_details')?['body/r81e76dab7d494e00b350d3282c300b8d']}",
+>  "confidentiality": "@{outputs('Get_response_details')?['body/r4a44db97a10d479c86bae58cb09824ec']}",
+>  "msdn": "@{outputs('Get_response_details')?['body/r9073f32b4b384d949159fe521f5045d1']}",
+>  "partner": "@{outputs('Get_response_details')?['body/r081532d229bc44a3b13b2fc1c68ca1ac']}",
+>  "owner": "@{outputs('Get_response_details')?['body/responder']}"
+>}
+
+The last call/request runs as long as the function runs and will be successful, if the function provides a positive status code like: ```HTTP 200``` at the end of the execution (Which is does by default).  
 
 ### Possible Improvements 
 
-To additionally approve the Integration/Workflow there are some point to quite easily improve this MVP. There 
+To additionally approve the Integration/Workflow and make it more Enterprise ready there are some point to quite easily improve this MVP. Out of my head there are two major point that can be implemented quite quick.  
 
 1. Approval Workflow 
-THere
-
-This can be configured similar to this: 
+In order to allow a minimum set of Governance, an Approval workflow might be needed to serve as a gatekeeper. This can be configured similar to this: 
 ![Approval](/img/Approval1.PNG)
 
-Find more info here: https://docs.microsoft.com/en-us/power-automate/create-approval-response-options
+Furthermore, you could branch the actions when it comes to Sandbox Subscriptions, in oder from them to be created straight away without a Subscription. 
+Find more information about how to create an approval action/workflow here: https://docs.microsoft.com/en-us/power-automate/create-approval-response-options
 
-1. Welcome Mail
+1. Welcome or getting started Mail
+To allow a smooth onboarding of the requestor a welcome or getting started mail is quite useful. This allows the requestor to quickly know how to work with Azure in the context of the company. This mial can be created quite easily, either by using the Outlook/Exchange Action or via Sendgrid (Used in this example). 
 
-sssss
-![PowerPlatform](/img/Email1.PNG)
+![PowerAutomate](/img/Email1.PNG)
 
 ## Azure Function
 
-In order for the function to work, the following  
+In order for the Azure Function to work, the following (addtitional) prereqitisites/requirements need to be met: 
 
-1. (One time Task): You must have an Owner role on an Enrollment Account to create a subscription: Grant access to create Azure Enterprise subscriptions to the Managed Service Identity/Service Principal (using the object ID) of the Azure Function See: https://docs.microsoft.com/en-us/azure/cost-management-billing/manage/grant-access-to-create-subscription?tabs=azure-powershell%2Cazure-powershell-2
+1. You must have an Owner role on an Enrollment Account to create a subscription
+
+This is a "One Time Task" and you must grant access to create Azure Enterprise subscriptions to the Managed Service Identity/Service Principal (using the object ID) of the Azure Function. The easiest way (IMHO) is to use a Managed Service Identity with the function and assign the permission to it. For more detailed steps on how to do it, see: https://docs.microsoft.com/en-us/azure/cost-management-billing/manage/grant-access-to-create-subscription?tabs=azure-powershell%2Cazure-powershell-2
 
 2. Management Groups (that will be leveraged in the Function) need to exists! 
+Since we want to make additional desicions based on the response details and not only create a subscription, The Management Group and Subscription Hierachy need to be in place. Your Management Group hierachy might vary, but you can easily customize the function to work with your hierachy.
 
-3. Microsoft Forms and Power Automate need to exist and and properly configured for the Input data 
+The main function itself is depicted below: 
 
 ```
 ...
@@ -288,7 +297,15 @@ New-AzTag -ResourceId "/subscriptions/$subid" -Tag $tags
 ...
 ```
 
-The complete function can be found here: https://github.com/lpassig/SubscriptionCreation 
+The complete function can be found and forked/cloned here: https://github.com/lpassig/SubscriptionCreation 
+
+# Final Thoughts
+
+Using the Microsoft cloud services you can easily create a self service portal for your company to create Azure subscription. Additionally, you can download and analyze the input data on the Froms quite easy:    
+
+![Overview](/img/FormOverview1.PNG)
+
+However, this approach has also its limits and if you have a service management tool in place you might want to use this one instead to implement teh workflow.    
 
 Let me know what you think!
  
@@ -297,9 +314,9 @@ Cheers!
 ## Sources
 <b id="f1">1</b> Enterprise Scale (https://github.com/Azure/Enterprise-Scale) [↩](#a1)
 
-<b id="f2">2</b> Azure Spoke Blueprint (https://github.com/lpassig/AzureSpokeBlueprint/) [↩](#a1)
+<b id="f2">2</b> Azure Spoke Blueprint (https://github.com/lpassig/AzureSpokeBlueprint/) [↩](#a2)
 
-<b id="f2">2</b> Mit Innovation aus der Krise (https://www.cio.de/a/mit-innovationen-aus-der-krise,3600303) [↩](#a2)
+<b id="f3">3</b> MS Power Automate Pricing (https://flow.microsoft.com/en-us/pricing/) [↩](#a3)
 
 
 
